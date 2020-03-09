@@ -1,9 +1,12 @@
 const express = require("express");
 const { Readable } = require("stream");
+const cors = require('cors');
 const faker = require("faker");
 const { thinid } = require("thinid");
 
 const app = express();
+
+app.use(cors());
 
 app.get("/", (req, res) => res.json("Chao Xin"));
 
@@ -16,7 +19,7 @@ const _delay = async time => {
 
 // Get fake data
 const _getText = async () => {
-  await _delay(100);
+  await _delay(300);
 
   return `"${thinid()}","${faker.name.findName()}"\n`;
 };
