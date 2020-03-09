@@ -8,6 +8,8 @@
     "start:dev": "nodemon index.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "thinid": "^0.5.5"
   }
 }
