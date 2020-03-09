@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handleClick = () => {
+    fetch('http://127.0.0.1:7777/csv')
+			.then(response => {
+				window.location.href = response.url;
+		});
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +25,9 @@ function App() {
         >
           Learn React
         </a>
+        <button className="App-link" onClick={handleClick}>
+          Download file
+        </button>
       </header>
     </div>
   );
